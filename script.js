@@ -1,0 +1,21 @@
+function toggleMode() {
+  //pegando o html
+  const html = document.documentElement
+
+  //trocando as classes
+  html.classList.toggle("light")
+
+  // pegar a tag img
+  const img = document.querySelector("#profile img")
+
+  // substituir a imagem
+  if (html.classList.contains("light")) {
+    // se tiver light mode, adicionar a imagem light
+    img.setAttribute("src", "./assets/avatar-light.png")
+    img.setAttribute("alt", "Foto do menino")
+  } else {
+    // se tiver sem light mode, manter a imagem normal
+    img.setAttribute("src", "./assets/avatar.png")
+    img.setAttribute("alt", "Foto de Vanessa e torre eiffel ao fundo.")
+  }
+}
